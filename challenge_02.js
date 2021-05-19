@@ -22,13 +22,23 @@ function Go(){
     let name ,age,drink, output;
     drink = "Milch";
     name = document.getElementById("firstName").value;
-    age = document.getElementById("age").value 
+    age =  parseInt(document.getElementById("age").value); 
+   
     
+
+    if(!Number.isInteger(age) ){
+        console.log("Lern schreiben!!!");
+        return;
+    }
+    if(age < 0){
+        console.log("Lern schreiben!!!");
+        return;
+    }
     if(document.getElementById("village").checked ){
         if(age >= 18){
-            drink = "Underberg"
+            drink = "Jägermeister";
             }else if(age >= 13){
-            drink = "Bier"
+            drink = "Bier";
             }else if(age >= 6){
             drink = "Vitamalz";
             }
@@ -36,9 +46,9 @@ function Go(){
             output = name + " trink " + drink + "."
     }else{
         if(age >= 18){
-            drink = "Wein"
+            drink = "Wein";
             }else if(age >= 13){
-            drink = "Cola"
+            drink = "Cola";
             }else if(age >= 6){
             drink = "Saft";
             }
