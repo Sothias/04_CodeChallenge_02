@@ -15,3 +15,36 @@ Alter 13-17 // Cola
 */
 
 /* Getränke-Challenge */
+
+
+
+function Go(){
+    let name ,age,drink, output;
+    drink = "Milch";
+    name = document.getElementById("firstName").value;
+    age = document.getElementById("age").value 
+    
+    if(document.getElementById("village").checked ){
+        if(age >= 18){
+            drink = "Underberg"
+            }else if(age >= 13){
+            drink = "Bier"
+            }else if(age >= 6){
+            drink = "Vitamalz";
+            }
+
+            output = name + " trink " + drink + "."
+    }else{
+        if(age >= 18){
+            drink = "Wein"
+            }else if(age >= 13){
+            drink = "Cola"
+            }else if(age >= 6){
+            drink = "Saft";
+            }
+            output = name + " darf " + drink +" trinken"
+    }
+   
+        document.getElementById("output").innerHTML = output;
+        //console.log(drink);
+}
